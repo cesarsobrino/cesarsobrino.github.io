@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--Etiquetas necesarias-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Titulo-->
+  <title></title>
+
+  <!--Icono-->
+  <link rel="icon" type="image/png" href="../images/cesar-grey-max-radius.png" />
+
+  <!--Bosstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!--JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  
+
+  <!--Enlaces internos-->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animaciones.css">
+  <link rel="stylesheet" href="../css/loader.css">
+  <script type="text/javascript" src="../js/script.js"></script>
+
+  <!--Enlaces externos-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
+</head>
+
+
+<body>
+
+  
+
+
+  <div class="container-fluid">
+    <div id="bloqeo">Si estas viendo esto significa que ahora mismo estas <br>
+      en un dispositivo incompatible con esta pagina web, puede ser por:
+      <br>-Estas en un dispostivo movil o tablet <br>-Estas en un ordenador ya sea portatil o torre con una resolucion muy baja.
+      <br><br>
+      Pruebe a cambiar de resolucion o recarge la paginas
+
+      <br><br><br>
+
+      Estoy trabajando en este problema.
+
+    </div>
+
+    <div id="loader">
+      <div id="containermenu">
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <p class="loading-text" aria-label="Loading">
+          <span class="letter" aria-hidden="true">L</span>
+          <span class="letter" aria-hidden="true">o</span>
+          <span class="letter" aria-hidden="true">a</span>
+          <span class="letter" aria-hidden="true">d</span>
+          <span class="letter" aria-hidden="true">i</span>
+          <span class="letter" aria-hidden="true">n</span>
+          <span class="letter" aria-hidden="true">g</span>
+        </p>
+
+        <div class="menulogoloader"></div>
+
+      </div>
+
+
+      <div id="test1"></div>
+
+    </div>
+
+
+    <div class="menuinicial">
+
+      <div class="logoimg">
+        <a href="index.html"><img src="../images/cesar-tr-max-black.png" id="imagenlogo"></a>
+      </div>
+
+
+
+    </div>
+
+    <div class="scrolldownicondiv">
+      <div class="mouse"></div>
+    </div>
+
+    <div class="godown" id="godown">
+
+    </div>
+
+    <div class="goup" id="goup">
+
+    </div>
+
+    <div class="btnwrapper" onclick="mostrarmenu()">
+      <!-- <img src="../images/menuw.png" alt="" class="menuimg"> -->
+    </div>
+    <div class="wrapper">
+      <ul>
+        <li><a href="#portada" onclick="hidewrapper()">Inicio</a></li>
+        <li><a href="#sobremired" onclick="hidewrapper()">Sobre mi</a></li>
+        <li><a href="#proyectosa" onclick="hidewrapper()">Proyectos</a></li>
+        <li><a href="#skills" onclick="hidewrapper()">Conocimientos</a></li>
+        <li><a href="#contacto" onclick="hidewrapper()">Contacto</a></li>
+        <li><a href="../files/CV César Sobrino.docx" download="CV César Sobrino.docx" onclick="hidewrapper()">Descargar CV</a></li>
+      </ul>
+    </div>
+
+
+
+    <div id="portada" class="fullheight">
+
+      <!-- <div class="nubes"></div>-->
+
+      <div class="textoinicial" id="textoinicial">
+        <h1 class="textoinicialh1">MI PORTFOLIO WEB</h1>
+      </div>
+
+
+
+
+
+      <div class="keyboardimg"></div>
+      <a href="#sobremired">
+        <div class="presentacion" id="presentacionseguidor">
+          <div class="presentacion2">
+
+            <p class="" style="margin-top:300px"> PROGRAMADOR WEB</p>
+          </div>
+
+         
+
+
+        </div>
+      </a>
+
+      <a href="../files/CV César Sobrino.docx" download="CV César Sobrino.docx"><div class="presentacioncv" id="presentacionanimacion">DESCARGAR CV</div></a>
+
+      <div class="parallax i1"><img src="../images/parat.png" class=" " alt=""></div>
+      <div class="parallax i2"><img src="../images/ct.png" class=" " alt=""></div>
+      <div class="parallax i3"> <img src="../images/st.png" class="  " alt=""></div>
+      <div class="parallax i4"><img src="../images/comillast.png" class="  " alt=""></div>
+
+
+    </div>
+
+    <div id="sobremi">
+
+      <div id="sobremired"></div>
+
+      <div class="portatil" id="portatil"><img src="../images/portatil.png" alt="">
+        <div class="textosobremi reveal">
+          <div class="row">
+            <h2 class="display-4">Sobre mi</h2>
+          </div>
+          <div class="row">
+            <p>¡Buenas! Me gustaría presentarme,<br> Me llamo César Sobrino, soy estudiante de Desarrollo Web
+              <br> Actualmente estoy cursando el 2ndo año de Programacion de aplicaciones Web <br>Me considero una
+              persona
+              trabajadora con muchas ganas de aprender y espero encontrar la oportunidad para seguir construyendo un
+              futuro como
+              programador.
+            </p>
+          </div>
+          <div class="row">
+            <p class="hobbies">Hobbies</p>
+          </div>
+          <div class="row" style="text-align: center;">
+            <div class="col-2">Gaming
+              <div class="hobbiesicongaming"><img src="../images/gaming.png" alt=""></div>
+            </div>
+            <div class="col-2">Futbol
+              <div class="hobbiesicon"><img src="../images/futbol.png" alt=""></div>
+            </div>
+            <div class="col-2">Padel
+              <div class="hobbiesicon"><img src="../images/padel.png" alt=""></div>
+            </div>
+            <div class="col-2">Gym
+              <div class="hobbiesicongym"><img src="../images/gym.png" alt=""></div>
+            </div>
+            <div class="col-2">Music
+              <div class="hobbiesicon"><img src="../images/music.png" alt=""></div>
+            </div>
+            <div class="col-2">Amigos
+              <div class="hobbiesicon"><img src="../images/amigos.png" alt=""></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="raton"><img src="../images/mouse2.png" alt=""></div>
+      <div class="auriculares" id="au"><img src="../images/au.png"></div>
+    </div>
+
+    <div id="proyectos">
+
+      <div class="sombrero"></div>
+
+
+
+      <div class="parallax i6"><img src="../images/ft.png" class=" " alt=""></div>
+      <div class=" parallax i5"><img src="../images/xt.png" class=" " alt=""></div>
+
+
+
+
+      <div class="row proyectosh2" id="proyectosa">
+        <div class="col-12">
+          <h2 class="display-3 reveal">PROYECTOS</h2>
+        </div>
+      </div>
+      <div class="row proyectosproyectos">
+        <div class="col-2">
+          <div class="flechacentrar">
+            <div class="flecha flechai" onclick="toleft()"></div>
+          </div>
+        </div>
+        <div class="col-8 grande">
+
+          <div class="proyectoscontenedor reveal">
+
+            <div class="proyectoscontent" id="proyectos1">
+              <div class="row">
+                <div class="col-12">
+                  <p class="display-4 proyectoscontentdisplay">Paginas Web</p>
+                </div>
+              </div>
+              <div class="row parent">
+
+
+                <div class="col-3 carta porfactual" data-tilt>
+
+                  <div class="cartatitulo">
+                    <p class="h3 karma textonegro">Mi porfolio Actual</p>
+                  </div>
+                  <div class="cartadescripcion ">
+                    <p class="textonegro"> Mi curriculum web que es esta misma pagina </p>
+                  </div>
+
+                </div>
+
+                <div class="col-3 carta porfantiguo" data-tilt>
+
+                  <div class="cartatitulo">
+                    <p class="h3 karma textoblanco">Mi antiguo portfolio web</p>
+                  </div>
+                  <div class="cartadescripcion">
+                    <p class="textoblanco"> El curriculum web que hice como proyecto para clase </p>
+                  </div>
+
+
+                </div>
+                <div class="col-3 carta porfjuegos" data-tilt>
+
+                  <div class="cartatitulo">
+                    <p class="h3 karma textoblanco">Gaming games</p>
+                  </div>
+                  <div class="cartadescripcion">
+                    <p class="textoblanco"> Una pagina que simula la compra de juegos con usuarios </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="proyectoscontent" id="proyectos2">
+              <div class="row">
+                <div class="col-12">
+                  <p class="display-4 proyectoscontentdisplay">Javascript</p>
+                </div>
+              </div>
+              <div class="row parent">
+
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+                </div>
+
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+
+                </div>
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="proyectoscontent" id="proyectos3">
+              <div class="row">
+                <div class="col-12">
+                  <p class="display-4 proyectoscontentdisplay">CSS</p>
+                </div>
+              </div>
+              <div class="row parent">
+
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+                </div>
+
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+
+                </div>
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="proyectoscontent" id="proyectos4">
+              <div class="row">
+                <div class="col-12">
+                  <p class="display-4 proyectoscontentdisplay">Juegos</p>
+                </div>
+              </div>
+              <div class="row parent">
+
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+                </div>
+
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+
+                </div>
+                <div class="col-3 carta" data-tilt>
+
+                  <div class="cartatitulo">TITULO</div>
+                  <div class="cartadescripcion">DESCRIPCION</div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-2">
+          <div class="flechacentrar">
+            <div class="flecha flechad" onclick="toright()"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calzado"></div>
+
+    </div>
+
+
+
+    <div id="skills">
+
+      <div class="container-fluid">
+
+        <div class="row conocimientosh2">
+          <div class="col-12">
+            <h2 class="display-3 reveal ">CONOCIMIENTOS</h2>
+          </div>
+        </div>
+
+        <div class="container">
+
+          <div class="row itemsalcentro reveal">
+
+            <div class="col-12">
+              <p class="display-4 proyectoscontentdisplay textonegro reveal itemsalcentro">PROGRAMACION WEB</p>
+
+            </div>
+            <div class="col-4">
+              <img src="../images/html.png" class="imagenconocimientos" alt="">
+              <p>HTML</p>
+            </div>
+            <div class="col-4">
+              <img src="../images/css.png" class="imagenconocimientos" alt="">
+              <p>CSS</p>
+            </div>
+            <div class="col-4">
+              <img src="../images/Javascript.png" class="imagenconocimientos" alt="">
+              <p>JAVASCRIPT</p>
+            </div>
+
+          </div>
+
+          <div class="row itemsalcentro reveal">
+            <div class="col-12">
+              <p class="display-4 proyectoscontentdisplay textonegro reveal itemsalcentro">PROGRAMACION</p>
+            </div>
+            <div class="col-3"><img src="../images/java.png" class="imagenconocimientos" alt="">
+              <p>JAVA</p></div>
+            <div class="col-3"><img src="../images/python.png" class="imagenconocimientos" alt="">
+              <p>PYTHON</p></div>
+            <div class="col-3"><img src="../images/php.png" class="imagenconocimientos" alt="">
+              <p>PHP</p></div>
+            <div class="col-3"><img src="../images/sql.png" class="imagenconocimientos" alt="">
+              <p>SQL</p></div>
+
+          </div>
+          <div class="row itemsalcentro reveal">
+            <div class="col-12">
+              <p class="display-4 proyectoscontentdisplay textonegro reveal itemsalcentro">ORDENADORES</p>
+            </div>
+            <div class="col-4"><img src="../images/pc.png" class="imagenconocimientos" alt="">
+              <p>MONTAJE Y MANTENIMIENTO DE HARDWARE</p></div>
+            <div class="col-4"><img src="../images/windows.png" class="imagenconocimientos" alt="">
+              <p>INSTALACION Y MANENIMIENTO DE WINDOWS</p></div>
+            <div class="col-4"><img src="../images/linux.png" class="imagenconocimientos" alt="">
+              <p>INSTALACION Y MANTENIMIENTO DE LINUX</p></div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+    </div>
+    <div class="sombrero2" ></div>
+    
+
+    <div id="contacto" class="fullheight">
+
+     
+
+    </div>
+   
+
+
+    <div id="contacto2" class="fullheight">
+
+
+
+          <div class="contactotexto">
+            <div class="row contactotextotitulo">
+              <div class="col-12">
+               <h1></h1> CESAR SOBRINO
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="content__container">
+      
+      
+                  <ul class="content__container__list">
+                    <li class="content__container__list__item"><center> <div class="gmailicon"></div>cesarsobrinoarribas@gmail.com</center></li>
+                    <li class="content__container__list__item"><center><div class="telicon"></div>+34 618788955</center></li>
+                    <li class="content__container__list__item"><center><div class="locaicon"></div>Madrid</center></li>
+                    <li class="content__container__list__item"><center><div class="saludoicon"></div>Espero que te haya gustado</center></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      
+        <a href="../files/CV César Sobrino.docx" download="CV César Sobrino.docx"><div class="descargarcvmovimiento" id="seguidor"></div></a>
+
+       
+
+      
+      <div class="ciruclocontacto">
+
+        <div class="redessociales">
+
+          <div class="encima"></div>
+
+          <a href="https://github.com/cesarsobrino" target="_blank"><div class="rd githib"></div></a>
+          <a href="https://www.instagram.com/zetasaab/" target="_blank"><div class="rd instgram"></div></a>
+          <a href="#" target="_blank"><div class="rd linkding"></div></a>
+          <a href="https://www.youtube.com/channel/UCBywG2c4Bn5Hs4hMjZrp_wg" target="_blank"><div class="rd youtube"></div></a>
+
+
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>var proyectosid = 1;
+
+    function toright() {
+
+      if (proyectosid == 4) {
+        proyectosid = 0;
+      }
+      proyectosid = proyectosid + 1;
+
+    }
+
+    function toleft() {
+      if (proyectosid == 1) {
+        proyectosid = 5;
+      }
+      proyectosid = proyectosid - 1;
+    }
+
+    $('.flecha').on("click", function () {
+      if (proyectosid == 1) {
+
+        $('#proyectos1').css('left', '0');
+        $('#proyectos2').css('left', '100%');
+        $('#proyectos3').css('left', '200%');
+        $('#proyectos4').css('left', '300%');
+
+        $('#proyectos1').css('opacity', '1');
+        $('#proyectos2').css('opacity', '0');
+        $('#proyectos3').css('opacity', '0');
+        $('#proyectos4').css('opacity', '0');
+
+      } else if (proyectosid == 2) {
+
+        $('#proyectos1').css('left', '-100%');
+        $('#proyectos2').css('left', '0');
+        $('#proyectos3').css('left', '100%');
+        $('#proyectos4').css('left', '200%');
+
+        $('#proyectos1').css('opacity', '0');
+        $('#proyectos2').css('opacity', '1');
+        $('#proyectos3').css('opacity', '0');
+        $('#proyectos4').css('opacity', '0');
+      } else if (proyectosid == 3) {
+
+        $('#proyectos1').css('left', '-200%');
+        $('#proyectos2').css('left', '-100%');
+        $('#proyectos3').css('left', '0');
+        $('#proyectos4').css('left', '100%');
+
+        $('#proyectos1').css('opacity', '0');
+        $('#proyectos2').css('opacity', '0');
+        $('#proyectos3').css('opacity', '1');
+        $('#proyectos4').css('opacity', '0');
+      }
+      else if (proyectosid == 4) {
+
+        $('#proyectos1').css('left', '-300%');
+        $('#proyectos2').css('left', '-200%');
+        $('#proyectos3').css('left', '-100%');
+        $('#proyectos4').css('left', '0');
+
+        $('#proyectos1').css('opacity', '0');
+        $('#proyectos2').css('opacity', '0');
+        $('#proyectos3').css('opacity', '0');
+        $('#proyectos4').css('opacity', '1');
+      }
+    });
+
+
+
+
+    $('a[href*="#"]').on('click', function (event) {
+      event.preventDefault();
+
+      disableScroll();
+
+      let position = $($(this).attr("href")).offset().top;
+      let headerHeight = $('header').outerHeight();
+      let distance = (position - headerHeight);
+      distance = distance;
+
+      $('body').velocity('scroll', {
+        duration: 3500,
+        offset: distance,
+        easing: 'easeInOutQuart',
+        complete: function () {
+          enableScroll();
+        }
+      });
+    });
+
+
+    $('#goup').on('click', function (event) {
+      event.preventDefault();
+
+      disableScroll();
+
+      $('body').velocity('scroll', {
+        duration: 3500,
+        offset: 0,
+        easing: 'easeInOutQuart',
+        complete: function () {
+          enableScroll();
+        }
+      });
+    });
+
+    $('#godown').on('click', function (event) {
+      event.preventDefault();
+
+      disableScroll();
+
+
+      $('body').velocity('scroll', {
+        duration: 3500,
+        offset: $(document).height(),
+        easing: 'easeInOutQuart',
+        complete: function () {
+          enableScroll();
+        }
+      });
+    });
+
+  </script>
+
+
+
+
+
+  <script type="text/javascript" src="../js/tilt.jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/velocity.ui.min.js"></script>
+</body>
+
+</html>
