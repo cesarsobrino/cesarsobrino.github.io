@@ -206,6 +206,7 @@ body{
     transition:0.5s;
     box-sizing: border-box;
     border:1px solid #1d1d1d;
+    background-position: center;
 }
 .presentacioncv:hover{
     transform:scale(1.1);
@@ -363,7 +364,7 @@ body{
   height:255px;
   left:89%;
  
-  top:75%;
+  top:52%;
   transform: rotate(-45deg);
   filter:blur(3px);
 }
@@ -950,6 +951,7 @@ input[type="checkbox"]{
   align-items: center;
   position: relative;
   display: flex;
+  z-index:3; 
 }
 
 
@@ -1015,6 +1017,7 @@ input[type="checkbox"]{
   filter: brightness(50%);
   border-radius:5px;
   box-shadow: 0px 0px 10px 5px  #FFFFFF;
+  z-index:2;
  
 }
 
@@ -1097,6 +1100,60 @@ input[type="checkbox"]{
  background-position:center;
 }
 
+.fullpagefondo{
+  background-image: url(../files/proyectos/javascript/fullpage/fullpage.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.parallaxfondo{
+  background-image: url(../files/proyectos/javascript/parallax/parallax.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.scollanimationsfondo{
+  background-image: url(../files/proyectos/javascript/scrollactive/scrollactive.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.animacionesfondo{
+  background-image: url(../files/proyectos/css/animaciones/animaciones.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.loadingfondo{
+  background-image: url(../files/proyectos/css/loading/loading.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.socialmediafondo{
+  background-image: url(../files/proyectos/css/socialnetworks/socialmedia.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.caracruzfondo{
+  background-image: url(../files/proyectos/juegos/caracruz/caracruz.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.precisionfondo{
+  background-image: url(../files/proyectos/juegos/preciosion/precision.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
+.serminoviafondo{
+  background-image: url(../files/proyectos/juegos/quiereserminovia/quiereserminovia.png);
+  background-size:cover;
+  background-position:center;
+  color:black;
+}
 .textonegro{
   color:black;
 }
