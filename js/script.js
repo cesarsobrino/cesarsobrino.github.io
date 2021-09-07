@@ -115,7 +115,7 @@ $(window).load(function () {
 
 
   $('#loader').css('transition', '1s');
-
+  $('#test1').css('opacity', '1');
   $('#test1').css('animation', 'stretchRight 3s forwards ease-in-out');
 
   var pheight = $(window).height();
