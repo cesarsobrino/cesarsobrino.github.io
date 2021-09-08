@@ -117,6 +117,8 @@ $(document).ready(function () {
 $(window).load(function () {
 
 
+  disableScroll();
+
   $('#loader').css('transition', '1s');
   $('#test1').css('opacity', '1');
   $('#test1').css('animation', 'stretchRight 3s forwards ease-in-out');
@@ -127,7 +129,7 @@ $(window).load(function () {
   $(".fullheight").each(function (index) {
     $(this).css('height', pheight + "px");
   });
-  
+
 
   $("#proyectos").css('height', (pheight + 400) + "px");
   $("#sobremi").css('height', (pheight + 300) + "px");
@@ -144,13 +146,13 @@ $(window).load(function () {
     $('#loader').css('opacity', '0');
     $('#loader').css('display', 'none');
     $("body").css('overflow-y', 'scroll');
-
+    enableScroll();
 
     $('.i1').addClass('slideRight');
     $('.i2').addClass('slideRighti2');
     $('.i3').addClass('slideLefti3');
     $('.i4').addClass('slideLeft');
-    
+
     $('.presentacion').addClass('slide-in-elliptic-top-fwd');
     $('.presentacioncv').addClass('slide-in-elliptic-top-fwd');
 
@@ -168,149 +170,243 @@ $(window).load(function () {
 
     }, 1000);
 
-    //deberia ser 3000
+    //deberia ser 3000,
   }, 3000);
 
 
-  $("body").mousemove(function(e) {
+  $("body").mousemove(function (e) {
     var x = event.clientX;     // Get the horizontal coordinate
     var y = event.clientY;     // Get the vertical coordinate
-   
+
     var pheight = $(window).height();
-    pheight=pheight/2;
+    pheight = pheight / 2;
     var wheight = $(window).width();
-    wheight=wheight/2;
-    x=x-wheight;
-    y=y-pheight;
+    wheight = wheight / 2;
+    x = x - wheight;
+    y = y - pheight;
     // var coor = "X coords: " + x + ", Y coords: " + y+" h:"+pheight+" wh:"+wheight;
     // console.log(coor);
-    var xm=x*0.01;
-    var ym=y*0.01;
-    var xm2=x*0.1;
-    var ym2=y*0.1;
-    $('#seguidor').css('transform','translate('+xm2+'px,'+ym2+'px)');
-    $('#presentacionseguidor').css('transform','translate('+xm+'px,'+ym+'px)');
-  
+    var xm = x * 0.01;
+    var ym = y * 0.01;
+    var xm2 = x * 0.1;
+    var ym2 = y * 0.1;
+    $('#seguidor').css('transform', 'translate(' + xm2 + 'px,' + ym2 + 'px)');
+    $('#presentacionseguidor').css('transform', 'translate(' + xm + 'px,' + ym + 'px)');
+
   });
 
   $(".rd").hover(
     function () {
-        $(this).removeClass('notshowrd').addClass('showrd');
-        
+      $(this).removeClass('notshowrd').addClass('showrd');
+
     },
     function () {
-        $(this).removeClass('showrd').addClass('notshowrd');
+      $(this).removeClass('showrd').addClass('notshowrd');
     }
   );
-  $(".presentacioncv").hover(
-    function () {
-        $(this).text('');
-        
-    },
-    function () {
-        $(this).text('DESCARGAR CV');
-    }
-  );
+  // $(".presentacioncv").hover(
+  //   function () {
+  //       $(this).text('');
+
+  //   },
+  //   function () {
+  //       $(this).text('CV');
+  //   }
+  // );
 
 
+  $('#menuinicio').on('click', function (event) {
+    event.preventDefault();
 
+    disableScroll();
 
-  $('#paginawebactual').on( "click", function() {
+    let position = $('#portada').offset().top;
+    let headerHeight = $('header').outerHeight();
+    let distance = (position - headerHeight);
+    distance = distance;
+
+    $('body').velocity('scroll', {
+      duration: 3500,
+      offset: distance,
+      easing: 'easeInOutQuart',
+      complete: function () {
+        enableScroll();
+      }
+    });
+  });
+  $('#menusobremi').on('click', function (event) {
+    event.preventDefault();
+
+    disableScroll();
+
+    let position = $('#sobremired').offset().top;
+    let headerHeight = $('header').outerHeight();
+    let distance = (position - headerHeight);
+    distance = distance;
+
+    $('body').velocity('scroll', {
+      duration: 3500,
+      offset: distance,
+      easing: 'easeInOutQuart',
+      complete: function () {
+        enableScroll();
+      }
+    });
+  });
+  $('#menuproyectos').on('click', function (event) {
+    event.preventDefault();
+
+    disableScroll();
+
+    let position = $('#proyectosa').offset().top;
+    let headerHeight = $('header').outerHeight();
+    let distance = (position - headerHeight);
+    distance = distance;
+
+    $('body').velocity('scroll', {
+      duration: 3500,
+      offset: distance,
+      easing: 'easeInOutQuart',
+      complete: function () {
+        enableScroll();
+      }
+    });
+  });
+  $('#menuconocimientos').on('click', function (event) {
+    event.preventDefault();
+
+    disableScroll();
+
+    let position = $('#skills').offset().top;
+    let headerHeight = $('header').outerHeight();
+    let distance = (position - headerHeight);
+    distance = distance;
+
+    $('body').velocity('scroll', {
+      duration: 3500,
+      offset: distance,
+      easing: 'easeInOutQuart',
+      complete: function () {
+        enableScroll();
+      }
+    });
+  });
+  $('#menucontacto').on('click', function (event) {
+    event.preventDefault();
+
+    disableScroll();
+
+    let position = $('#contacto').offset().top;
+    let headerHeight = $('header').outerHeight();
+    let distance = (position - headerHeight);
+    distance = distance + 200;
+
+    $('body').velocity('scroll', {
+      duration: 3500,
+      offset: distance,
+      easing: 'easeInOutQuart',
+      complete: function () {
+        enableScroll();
+      }
+    });
+  });
+
+  $('#paginawebactual').on("click", function () {
     window.location.href = 'index.html';
   });
-  $('#paginawebantigua').on( "click", function() {
+  $('#paginawebantigua').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/paginasweb/portfolioCesarSobrino/");
   });
-  $('#paginawebjuegos').on( "click", function() {
+  $('#paginawebjuegos').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/paginasweb/Juegos/php/index.php");
   });
-  $('#fullpageid').on( "click", function() {
+  $('#fullpageid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/javascript/fullpage/fullpagejv/");
   });
-  $('#parrallaxid').on( "click", function() {
+  $('#parrallaxid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/javascript/parallax/html/index.html");
   });
-  $('#onscrollid').on( "click", function() {
+  $('#onscrollid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/javascript/scrollactive/");
   });
-  $('#animacionesid').on( "click", function() {
+  $('#animacionesid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/css/animaciones/");
   });
-  $('#loadingid').on( "click", function() {
+  $('#loadingid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/css/loading/");
   });
-  $('#socialmediaid').on( "click", function() {
+  $('#socialmediaid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/css/socialnetworks/");
   });
-  $('#caracruzid').on( "click", function() {
+  $('#caracruzid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/juegos/caracruz/");
   });
-  $('#precisionid').on( "click", function() {
+  $('#precisionid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/juegos/preciosion/");
   });
-  $('#quieresnoviaid').on( "click", function() {
+  $('#quieresnoviaid').on("click", function () {
     window.open("https://cesarsobrinoarribas.000webhostapp.com/Portfolio/cesar/juegos/quiereserminovia/");
   });
 
- proyectosid = Math.floor(Math.random() * (4)) + 1;;
+  proyectosid = Math.floor(Math.random() * (4)) + 1;;
 
-  console.log(proyectosid); 
 
- 
-    if (proyectosid == 1) {
 
-      $('#proyectos1').css('left', '0');
-      $('#proyectos2').css('left', '100%');
-      $('#proyectos3').css('left', '200%');
-      $('#proyectos4').css('left', '300%');
 
-      $('#proyectos1').css('opacity', '1');
-      $('#proyectos2').css('opacity', '0');
-      $('#proyectos3').css('opacity', '0');
-      $('#proyectos4').css('opacity', '0');
+  if (proyectosid == 1) {
 
-    } else if (proyectosid == 2) {
+    $('#proyectos1').css('left', '0');
+    $('#proyectos2').css('left', '100%');
+    $('#proyectos3').css('left', '200%');
+    $('#proyectos4').css('left', '300%');
 
-      $('#proyectos1').css('left', '-100%');
-      $('#proyectos2').css('left', '0');
-      $('#proyectos3').css('left', '100%');
-      $('#proyectos4').css('left', '200%');
+    $('#proyectos1').css('opacity', '1');
+    $('#proyectos2').css('opacity', '0');
+    $('#proyectos3').css('opacity', '0');
+    $('#proyectos4').css('opacity', '0');
 
-      $('#proyectos1').css('opacity', '0');
-      $('#proyectos2').css('opacity', '1');
-      $('#proyectos3').css('opacity', '0');
-      $('#proyectos4').css('opacity', '0');
-    } else if (proyectosid == 3) {
+  } else if (proyectosid == 2) {
 
-      $('#proyectos1').css('left', '-200%');
-      $('#proyectos2').css('left', '-100%');
-      $('#proyectos3').css('left', '0');
-      $('#proyectos4').css('left', '100%');
+    $('#proyectos1').css('left', '-100%');
+    $('#proyectos2').css('left', '0');
+    $('#proyectos3').css('left', '100%');
+    $('#proyectos4').css('left', '200%');
 
-      $('#proyectos1').css('opacity', '0');
-      $('#proyectos2').css('opacity', '0');
-      $('#proyectos3').css('opacity', '1');
-      $('#proyectos4').css('opacity', '0');
-    }
-    else if (proyectosid == 4) {
+    $('#proyectos1').css('opacity', '0');
+    $('#proyectos2').css('opacity', '1');
+    $('#proyectos3').css('opacity', '0');
+    $('#proyectos4').css('opacity', '0');
+  } else if (proyectosid == 3) {
 
-      $('#proyectos1').css('left', '-300%');
-      $('#proyectos2').css('left', '-200%');
-      $('#proyectos3').css('left', '-100%');
-      $('#proyectos4').css('left', '0');
+    $('#proyectos1').css('left', '-200%');
+    $('#proyectos2').css('left', '-100%');
+    $('#proyectos3').css('left', '0');
+    $('#proyectos4').css('left', '100%');
 
-      $('#proyectos1').css('opacity', '0');
-      $('#proyectos2').css('opacity', '0');
-      $('#proyectos3').css('opacity', '0');
-      $('#proyectos4').css('opacity', '1');
-    }
-    $flecha=$('.flecha');
+    $('#proyectos1').css('opacity', '0');
+    $('#proyectos2').css('opacity', '0');
+    $('#proyectos3').css('opacity', '1');
+    $('#proyectos4').css('opacity', '0');
+  }
+  else if (proyectosid == 4) {
+
+    $('#proyectos1').css('left', '-300%');
+    $('#proyectos2').css('left', '-200%');
+    $('#proyectos3').css('left', '-100%');
+    $('#proyectos4').css('left', '0');
+
+    $('#proyectos1').css('opacity', '0');
+    $('#proyectos2').css('opacity', '0');
+    $('#proyectos3').css('opacity', '0');
+    $('#proyectos4').css('opacity', '1');
+  }
+  $flecha = $('.flecha');
 
 });
 
 function toright() {
 
-  
+
   if (proyectosid == 4) {
     proyectosid = 0;
   }
@@ -445,6 +541,29 @@ $(window).resize(function () {
 
 
 $(window).scroll(function () {
+
+  var value = window.scrollY;
+
+  var wheight = $(window).height();
+  var totald = $(document).height() - wheight;
+
+
+  //value 
+
+  // console.log(value+","+totald);
+
+  var cuenta = value / totald;
+  cuenta = cuenta * 100;
+
+  var rounded = Math.round(cuenta * 10) / 10;
+
+
+
+  $('.linea').css('width', rounded + '%');
+
+
+
+
   var value = window.scrollY;
   var value1 = value * 0.1;
   var value2 = value * 4;
@@ -498,9 +617,9 @@ $(window).scroll(function () {
     $('#goup').css('opacity', '1');
     $('#goup').css('transform', 'scale(1)');
 
-    $('.presentacioncv').css('transition', '1s');
-    $('.presentacioncv').css('width', '0px');
-    $('.presentacioncv').css('height', '0px');
+    $('.presentacioncv').css('transition', '0.7s');
+    $('.presentacioncv').css('width', '50px');
+    $('.presentacioncv').css('height', '50px');
     $('.presentacioncv').css('border', '0px');
     $('.presentacioncv').css('border-radius ', '100px');
     $('.presentacioncv').text('');
@@ -511,21 +630,27 @@ $(window).scroll(function () {
     $('.presentacioncv').css('margin-top', '10px');
     $('.presentacioncv').css('margin-left', '-70px');
 
-    $('.wrapper').css('transition', '0.5s');
-    $('.wrapper').css('display', 'block');
+
     $('.btnwrapper').css('transition', '0.5s');
+    $('.wrapper').css('transition', '0.5s');
+    // $('.wrapper').addClass('entrada');
+    // $('.btnwrapper').addClass('entrada');
+
+    $('.wrapper').css('display', 'block');
+
     $('.btnwrapper').css('display', 'block');
-  
-    setTimeout(function(){ 
+
+    setTimeout(function () {
       $('.wrapper').css('opacity', '1');
       $('.btnwrapper').css('opacity', '1');
-      $('.presentacioncv').css('opacity','0');
-    }, 
-    1000);
-   
+      $('.presentacioncv').css('opacity', '0');
+    },
+      500);
 
-  } else {
+
+  } else if (top <= 0) {
     //MOusescrolldown animacion hacia arriba
+
     $('.scrolldownicondiv').css('opacity', '1');
 
     // Botones de subir y bajar
@@ -534,36 +659,37 @@ $(window).scroll(function () {
     $('#goup').css('opacity', '1');
     $('#goup').css('transform', 'scale(0)');
 
-    $('.wrapper').css('transition', '0.1s');
-    $('.btnwrapper').css('transition', '0.1s');
-     $('.wrapper').css('opacity', '0');
-      $('.btnwrapper').css('opacity', '0');
-      
+
+    $('.wrapper').css('opacity', '0');
+    $('.btnwrapper').css('opacity', '0');
+    $('.wrapper').css('display', 'none');
+    $('.btnwrapper').css('display', 'none');
 
 
-    $('.presentacioncv').css('transition', '1s');
-    $('.presentacioncv').css('opacity','1');
-    $('.presentacioncv').css('width', '270px');
-    $('.presentacioncv').css('height', '50px');
-    $('.presentacioncv').css('border', '0px solid #1d1d1d');
+
+    $('.presentacioncv').css('transition', '0.5s');
+    $('.presentacioncv').css('opacity', '1');
+    $('.presentacioncv').css('width', '100px');
+    $('.presentacioncv').css('height', '100px');
+    $('.presentacioncv').css('border', '1px solid #1d1d1d');
     $('.presentacioncv').css('border-radius ', '20px');
-    $('.presentacioncv').text('DESCARGAR CV');
+    $('.presentacioncv').text('CV');
     $('.presentacioncv').css('position', 'absolute');
     $('.presentacioncv').css('background-color', '#2a2a2a');
     $('.presentacioncv').css('left', '50%');
     $('.presentacioncv').css('top', '70%');
     $('.presentacioncv').css('margin-top', '0px');
-    $('.presentacioncv').css('margin-left', '-135px');
+    $('.presentacioncv').css('margin-left', '-40px');
 
 
-    setTimeout(function(){ 
-      $('.wrapper').css('opacity', '0');
-      $('.btnwrapper').css('opacity', '0');
-      $('.wrapper').css('display', 'none');
-    $('.btnwrapper').css('display', 'none');
-    $('.presentacioncv').css('opacity','1');
-    }, 
-    1000);
+    // setTimeout(function(){ 
+    //   $('.wrapper').css('opacity', '0');
+    //   $('.btnwrapper').css('opacity', '0');
+    //   $('.wrapper').css('display', 'none');
+    // $('.btnwrapper').css('display', 'none');
+    // $('.presentacioncv').css('opacity','1');
+    // }, 
+    // 1000);
 
   }
 
@@ -579,40 +705,44 @@ $(window).scroll(function () {
   }
 
 
-  var proyectostop=$("#proyectos").position().top;
-  var skillstop=$("#skills").position().top;
-  var contactotop=$("#contacto").position().top;
-  
+  var proyectostop = $("#proyectos").position().top;
+  var skillstop = $("#skills").position().top;
+  var contactotop = $("#contacto").position().top;
 
 
-  if (top <= 0 && top < proyectostop && top<skillstop && top<contactotop) {
+
+  if (top <= 0 && top < proyectostop && top < skillstop && top < contactotop) {
     $('.menuinicial').css('transition', '0.5s');
     $(".logoimg").css('width', '200px');
     $('.menuinicial').css('height', '150px');
     $("#imagenlogo").attr("src", "../images/cesar-tr-max-black.png");
     $('.menuinicial').css('background-color', 'transparent');
-    
-  }else if(top> 0 && top < proyectostop && top<skillstop && top<contactotop){
+    $('.linea').css('background-color', 'rgb(13, 13,13)');
+
+  } else if (top > 0 && top < proyectostop && top < skillstop && top < contactotop) {
     $('.menuinicial').css('transition', '0.5s');
     $('.menuinicial').css('height', '70px');
     $("#imagenlogo").attr("src", "../images/cesar-tr-large-black.png");
-
     $('.menuinicial').css('background-color', 'transparent');
     $(".logoimg").css('width', '150px');
-  }else if(top>0 && top > (proyectostop-100) && top<skillstop && top<contactotop){
+    $('.linea').css('background-color', 'rgb(13, 13,13)');
+
+  } else if (top > 0 && top > (proyectostop - 100) && top < skillstop && top < contactotop) {
     $('.menuinicial').css('transition', '0.5s');
     $("#imagenlogo").attr("src", "../images/cesar-tr-large-white.png");
     $('.menuinicial').css('background-color', 'transparent');
     $('.menuinicial').css('height', '0px');
     $(".logoimg").css('width', '150px');
     $('.menuinicial').css('height', '70px');
+    $('.linea').css('background-color', 'white');
   }
-  else if(top>0 && top >= skillstop  && top>skillstop && top<contactotop){
+  else if (top > 0 && top >= skillstop && top > skillstop && top < contactotop) {
     $('.menuinicial').css('transition', '0.5s');
     $('.menuinicial').css('height', '70px');
     $("#imagenlogo").attr("src", "../images/cesar-tr-large-black.png");
+    $('.linea').css('background-color', 'rgb(13, 13,13)');
   }
-  else if(top>0 && top >= skillstop  && top>skillstop && top>=contactotop){
+  else if (top > 0 && top >= skillstop && top > skillstop && top >= contactotop) {
     $('.menuinicial').css('transition', '0.5s');
     $('.menuinicial').css('height', '70px');
     $("#imagenlogo").attr("src", "../images/cesar-tr-large-white.png");
@@ -640,12 +770,77 @@ $(window).scroll(function () {
   }
 
 
-  if(top > $('#skills').position().top){
-    $("#contacto2").css('display','block');
-  }else{
-    $("#contacto2").css('display','none');
+  if (top > $('#skills').position().top) {
+    $("#contacto2").css('display', 'block');
+  } else {
+    $("#contacto2").css('display', 'none');
   }
 
+
+  var puntoshow=600;
+  var portadatop = $("#portada").position().top;
+  var sobremitop = $("#sobremi").position().top-puntoshow;
+  var proyectostop = $("#proyectos").position().top-puntoshow;
+  var skillstop = $("#skills").position().top-puntoshow;
+  var contactotop = $("#contacto").position().top-puntoshow;
+
+  if (top > portadatop && top < sobremitop && top < proyectostop && top < skillstop && top < contactotop) {
+    $("#spanmenu1").addClass('menuactives');
+    $("#lineamenu1").addClass('menuactivel');
+    $("#spanmenu2").removeClass('menuactives');
+    $("#lineamenu2").removeClass('menuactivel');
+    $("#spanmenu3").removeClass('menuactives');
+    $("#lineamenu3").removeClass('menuactivel');
+    $("#spanmenu4").removeClass('menuactives');
+    $("#lineamenu4").removeClass('menuactivel');
+    $("#spanmenu5").removeClass('menuactives');
+    $("#lineamenu5").removeClass('menuactivel');
+
+  } else if (top > portadatop && top > sobremitop && top < proyectostop && top < skillstop && top < contactotop) {
+    $("#spanmenu1").removeClass('menuactives');
+    $("#lineamenu1").removeClass('menuactivel');
+    $("#spanmenu2").addClass('menuactives');
+    $("#lineamenu2").addClass('menuactivel');
+    $("#spanmenu3").removeClass('menuactives');
+    $("#lineamenu3").removeClass('menuactivel');
+    $("#spanmenu4").removeClass('menuactives');
+    $("#lineamenu4").removeClass('menuactivel');
+    $("#spanmenu5").removeClass('menuactives');
+    $("#lineamenu5").removeClass('menuactivel');
+  } else if (top > portadatop && top > sobremitop && top > proyectostop && top < skillstop && top < contactotop) {
+    $("#spanmenu1").removeClass('menuactives');
+    $("#lineamenu1").removeClass('menuactivel');
+    $("#spanmenu2").removeClass('menuactives');
+    $("#lineamenu2").removeClass('menuactivel');
+    $("#spanmenu3").addClass('menuactives');
+    $("#lineamenu3").addClass('menuactivel');
+    $("#spanmenu4").removeClass('menuactives');
+    $("#lineamenu4").removeClass('menuactivel');
+    $("#spanmenu5").removeClass('menuactives');
+    $("#lineamenu5").removeClass('menuactivel');
+  } else if (top > portadatop && top > sobremitop && top > proyectostop && top > skillstop && top < contactotop) {
+    $("#spanmenu1").removeClass('menuactives');
+    $("#lineamenu1").removeClass('menuactivel');
+    $("#spanmenu2").removeClass('menuactives');
+    $("#lineamenu2").removeClass('menuactivel');
+    $("#spanmenu3").removeClass('menuactives');
+    $("#lineamenu3").removeClass('menuactivel');
+    $("#spanmenu4").addClass('menuactives');
+    $("#lineamenu4").addClass('menuactivel');
+    $("#spanmenu5").removeClass('menuactives');
+    $("#lineamenu5").removeClass('menuactivel');
+  } else if (top > portadatop && top > sobremitop && top > proyectostop && top > skillstop && top > contactotop) {
+    $("#spanmenu1").removeClass('menuactives');
+    $("#lineamenu1").removeClass('menuactivel');
+    $("#spanmenu2").removeClass('menuactives');
+    $("#lineamenu2").removeClass('menuactivel');
+    $("#spanmenu3").removeClass('menuactives');
+    $("#lineamenu3").removeClass('menuactivel');
+    $("#spanmenu4").removeClass('menuactives');
+    $("#lineamenu4").removeClass('menuactivel');
+    $("#spanmenu5").addClass('menuactives');
+    $("#lineamenu5").addClass('menuactivel');
+  }
 
 
 
@@ -685,7 +880,7 @@ function mostrarmenu(params) {
 }
 
 
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
 function preventDefault(e) {
   e.preventDefault();
@@ -702,9 +897,9 @@ function preventDefaultForScrollKeys(e) {
 var supportsPassive = false;
 try {
   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
+    get: function () { supportsPassive = true; }
   }));
-} catch(e) {}
+} catch (e) { }
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
@@ -720,7 +915,7 @@ function disableScroll() {
 // call this to Enable
 function enableScroll() {
   window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
   window.removeEventListener('touchmove', preventDefault, wheelOpt);
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
