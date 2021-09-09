@@ -419,7 +419,7 @@ body {
     left: 95%;
     margin-left: -120px;
     margin-top: -125px;
-    z-index: 4;
+    z-index: 7;
 }
 
 .menuli {
@@ -1016,11 +1016,13 @@ p {
 .flechai {
     background-image: url(../images/flechai.png);
     background-size: 120px 200px;
+    margin-right: 0px;
 }
 
 .flechad {
     background-image: url(../images/flechad.png);
     background-size: 120px 200px;
+    margin-left: 0px;
 }
 
 .flechacentrar {
