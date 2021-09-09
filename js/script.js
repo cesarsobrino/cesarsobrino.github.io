@@ -152,7 +152,7 @@ $(window).load(function () {
     $('.i3').addClass('slideLefti3');
     $('.i4').addClass('slideLeft');
 
-    $('.presentacion').addClass('slide-in-elliptic-top-fwd');
+    $('.presentacion').addClass('fadeIn');
     $('.presentacioncv').addClass('slide-in-elliptic-top-fwd');
 
 
