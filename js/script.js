@@ -6,7 +6,7 @@ $(document).ready(function() {
     // const colors = ["#E4E4E4", "#2A2A2A", "#F3F3F3", "#000000", "#515151"];
     const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
     const colors2 = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-    const numBalls = 100;
+    const numBalls = 200;
     const balls = [];
 
     for (let i = 0; i < numBalls; i++) {
@@ -712,21 +712,21 @@ $(window).scroll(function() {
         $('.menuinicial').css('transition', '0.5s');
         $(".logoimg").css('width', '200px');
         $('.menuinicial').css('height', '150px');
-        $("#imagenlogo").attr("src", "../images/cesar-tr-max-black.png");
+        $("#imagenlogo").attr("src", "images/cesar-tr-max-black.png");
         $('.menuinicial').css('background-color', 'transparent');
         $('.linea').css('background-color', 'rgb(13, 13,13)');
 
     } else if (top > 0 && top < proyectostop && top < skillstop && top < contactotop) {
         $('.menuinicial').css('transition', '0.5s');
         $('.menuinicial').css('height', '70px');
-        $("#imagenlogo").attr("src", "../images/cesar-tr-large-black.png");
+        $("#imagenlogo").attr("src", "images/cesar-tr-large-black.png");
         $('.menuinicial').css('background-color', 'transparent');
         $(".logoimg").css('width', '150px');
         $('.linea').css('background-color', 'rgb(13, 13,13)');
 
     } else if (top > 0 && top > (proyectostop - 100) && top < skillstop && top < contactotop) {
         $('.menuinicial').css('transition', '0.5s');
-        $("#imagenlogo").attr("src", "../images/cesar-tr-large-white.png");
+        $("#imagenlogo").attr("src", "images/cesar-tr-large-white.png");
         $('.menuinicial').css('background-color', 'transparent');
         $('.menuinicial').css('height', '0px');
         $(".logoimg").css('width', '150px');
@@ -735,12 +735,12 @@ $(window).scroll(function() {
     } else if (top > 0 && top >= skillstop && top > skillstop && top < contactotop) {
         $('.menuinicial').css('transition', '0.5s');
         $('.menuinicial').css('height', '70px');
-        $("#imagenlogo").attr("src", "../images/cesar-tr-large-black.png");
+        $("#imagenlogo").attr("src", "images/cesar-tr-large-black.png");
         $('.linea').css('background-color', 'rgb(13, 13,13)');
     } else if (top > 0 && top >= skillstop && top > skillstop && top >= contactotop) {
         $('.menuinicial').css('transition', '0.5s');
         $('.menuinicial').css('height', '70px');
-        $("#imagenlogo").attr("src", "../images/cesar-tr-large-white.png");
+        $("#imagenlogo").attr("src", "images/cesar-tr-large-white.png");
     }
 
 
@@ -849,7 +849,7 @@ function asd() {
 function hidewrapper() {
     var wraper = $('.wrapper');
     wraper.css('clip-path', 'circle(30px at calc(100% - 45px) 35px)');
-    $(".btnwrapper").css("background-image", "url(../images/menuw.png)");
+    $(".btnwrapper").css("background-image", "url(images/menuw.png)");
     $("body").css('overflow-y', 'scroll');
     menu = true;
 
@@ -863,12 +863,12 @@ function mostrarmenu(params) {
     if (menu) {
         wraper.css('clip-path', 'circle(75%)');
 
-        $(".btnwrapper").css("background-image", "url(../images/xw.png)");
+        $(".btnwrapper").css("background-image", "url(images/xw.png)");
         $("body").css('overflow-y', 'hidden');
         menu = false;
     } else {
         wraper.css('clip-path', 'circle(30px at calc(100% - 45px) 35px)');
-        $(".btnwrapper").css("background-image", "url(../images/menuw.png)");
+        $(".btnwrapper").css("background-image", "url(images/menuw.png)");
         $("body").css('overflow-y', 'scroll');
         menu = true;
     }

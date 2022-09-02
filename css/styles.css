@@ -44,7 +44,14 @@
     padding: 0px;
 }
 
+html {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
 body {
+    width: 100%;
     background-color: rgba(230, 230, 230);
     margin: 0 auto;
     padding: 0 auto;
@@ -179,6 +186,10 @@ body {
     text-align: center;
     overflow: hidden;
     transform: translateX(500px);
+}
+
+.presentacion_p {
+    padding: 25px 30px;
 }
 
 .presentacioncv {
