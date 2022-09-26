@@ -26,7 +26,7 @@ $(window).load(function() {
         // $('.presentacion').addClass('fadeIn');
         $('.presentacioncv').addClass('slide-in-elliptic-top-fwd');
         //deberia ser 3000,
-    }, 000);
+    }, 3000);
 
 
     $("body").mousemove(function(e) {
